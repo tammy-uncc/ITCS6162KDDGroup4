@@ -1,5 +1,5 @@
 # ITCS 6162 KDD Group 4
-Repository for group projet documentation
+Repository for group project documentation
 
 ## Team Members
 Julie Berryhill<br>
