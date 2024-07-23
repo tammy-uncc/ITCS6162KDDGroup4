@@ -11,6 +11,8 @@ Dasha Rizvanova<br>
 ## Introduction of Project
 
 ### Problem Understanding
+This analysis will focus on identifying the feature set needed to accuractly predict alzhiemers in a patient. Blah blah blah
+
 
 ## Description of data
 
