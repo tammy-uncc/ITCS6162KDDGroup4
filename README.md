@@ -17,7 +17,8 @@ This analysis will focus on identifying the characteristics of people who are di
 ##### Tammy Questions
 What characteristics are most common in people who become diagnosed with Alzheimer's disease?<br>
 Which of the characteristics can be identified prior to the onset of the disease?<br>
-
+https://www.nia.nih.gov/health/alzheimers-and-dementia/alzheimers-disease-fact-sheet
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8927715/
 
 ## Description of data
 
