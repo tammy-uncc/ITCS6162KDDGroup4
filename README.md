@@ -1,12 +1,16 @@
 # ITCS 6162 KDD Group 4
 Repository for group project documentation
 
+## Github repository
+https://github.com/tammy-uncc/ITCS6162KDDGroup4.git
+
 ## Team Members
 Julie Berryhill<br>
 Manoj Aitha<br>
 Gabriel Van Dreel<br>
 Tammy Ziegler<br>
 Dasha Rizvanova<br>
+
 
 ## Introduction of Project
 
