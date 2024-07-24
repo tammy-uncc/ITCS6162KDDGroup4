@@ -24,6 +24,17 @@ Which of the characteristics can be identified prior to the onset of the disease
 ### Data Understanding
 
 ### Data Preparation
+Data contains 1389 negative diagnosis and 760 with a positive diagnosis.
+
+##### Data  
+- Ethnicity.  As it is, the data is highly biased towards caucasions.  Perhaps remove.
+- Education level.  Remvoe as this seems irrelavent.  
+- Smoking ???.  Data is highly weighted to non-smokers. Look to see if there is a correlation
+- Family history. Also highly weighted.  Look for a correlation.
+- Medical History items all seem weighted to the negatives for each of the conditions specified.  Perhaps look for a correlation.
+- Memory complaints and Behavioral Problems seems to be a very subjective data element.  Perhaps these should be removed.
+- 
+
 
 ## Modeling
 
