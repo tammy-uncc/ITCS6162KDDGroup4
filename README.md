@@ -13,6 +13,10 @@ Dasha Rizvanova<br>
 ### Problem Understanding
 This analysis will focus on identifying the characteristics of people who are diagnosed with Alzhiemers disease. Blah blah blah
 
+#### Research Questions
+What characteristics are most common in Alzheimer patients?
+Is the data set bias?
+
 
 ## Description of data
 
