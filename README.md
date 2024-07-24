@@ -14,6 +14,7 @@ Dasha Rizvanova<br>
 This analysis will focus on identifying the characteristics of people who are diagnosed with Alzhiemers disease. Blah blah blah
 
 #### Research Questions
+##### Tammy Questions
 What characteristics are most common in Alzheimer patients?<br>
 Is the data set bias?
 
