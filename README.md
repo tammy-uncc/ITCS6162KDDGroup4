@@ -27,6 +27,7 @@ Which of the characteristics can be identified prior to the onset of the disease
 Data contains 1389 negative diagnosis and 760 with a positive diagnosis.
 
 ##### Data  
+- Remvoe PatientId and DoctorInCharge
 - Ethnicity.  As it is, the data is highly biased towards caucasions.  Perhaps remove.
 - Education level.  Remvoe as this seems irrelavent.  
 - Smoking ???.  Data is highly weighted to non-smokers. Look to see if there is a correlation
