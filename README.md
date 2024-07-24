@@ -15,8 +15,8 @@ This analysis will focus on identifying the characteristics of people who are di
 
 #### Research Questions
 ##### Tammy Questions
-What characteristics are most common in Alzheimer patients?<br>
-Is the data set bias?
+What characteristics are most common in people who become diagnosed with Alzheimer's disease?<br>
+Which of the characteristics can be identified prior to the onset of the disease?<br>
 
 
 ## Description of data
