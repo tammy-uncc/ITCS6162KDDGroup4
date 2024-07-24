@@ -24,6 +24,10 @@ Which of the characteristics can be identified prior to the onset of the disease
 https://www.nia.nih.gov/health/alzheimers-and-dementia/alzheimers-disease-fact-sheet
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8927715/
 
+##### Dasha Questions
+How do factors such as alcohol consumption, age, ethnic background, and medical history influence the risk of being diagnosed with Alzheimer's Disease? Most importantly, can we develop a model to identify individuals at risk based on these factors?
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10253673/
+https://www.washingtonpost.com/wellness/2024/03/27/dementia-aging-risk-brain-diabetes-pollution-alcohol/
 ## Description of data
 
 ### Data Understanding
