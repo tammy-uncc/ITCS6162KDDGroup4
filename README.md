@@ -19,21 +19,13 @@ We will be using supervised learning methods as the diagnosis of Alzheimer's is 
 ### Problem Understanding
 This analysis will focus on identifying the characteristics of people who are diagnosed with Alzhiemers disease. Blah blah blah
 
-#### Research Questions
-##### Tammy Questions
-What characteristics are most common in people who become diagnosed with Alzheimer's disease?<br>
-Which of the characteristics can be identified prior to the onset of the disease?<br>
-https://www.nia.nih.gov/health/alzheimers-and-dementia/alzheimers-disease-fact-sheet
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8927715/
-
-##### Dasha Questions
-How do factors such as alcohol consumption, age, ethnic background, and medical history influence the risk of being diagnosed with Alzheimer's Disease? Most importantly, can we develop a model to identify individuals at risk based on these factors?
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10253673/
-https://www.washingtonpost.com/wellness/2024/03/27/dementia-aging-risk-brain-diabetes-pollution-alcohol/
-## Description of data
+#### Research Question
+Are there any lifestyle factors that could be changed to reduce or eliminate the onset of Alzheimers?
 
 ### Data Understanding
+https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset?select=alzheimers_disease_data.csv
 
+The dataset consists of 2150 entries detailing various physiological characteristics of patients who were considered for an Alzheimer’s disease diagnosis and whether they were formally diagnosed with the illness. Some of the data such as the gender and ethnicity columns is categorical while other data is numeric and represents either an index for a rating of some condition such as sleep quality or a direct measurement of some physical characteristic such as cholesterol. All of the numeric data points could be considered time series data with respect to age. Some columns in the dataset such as the name of the doctor in charge of a given patient, however, have been sanitized and provide no meaningful information.
 ### Data Preparation
 Data contains 1389 negative diagnosis and 760 with a positive diagnosis.
 
