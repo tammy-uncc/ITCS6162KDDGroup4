@@ -34,9 +34,9 @@ The dataset consists of 2150 entries detailing various physiological characteris
 Data contains 1389 negative diagnosis and 760 with a positive diagnosis.
 
 ##### Data  
-- Remvoe PatientId and DoctorInCharge
-- Ethnicity.  As it is, the data is highly biased towards caucasions.  Perhaps remove.
-- Education level.  Remvoe as this seems irrelavent.  
+- Remove PatientId and DoctorInCharge
+- Ethnicity.  As it is, the data is highly biased towards caucasians.  Perhaps remove.
+- Education level.  Remove as this seems irrelavent.  
 - Smoking.  Data is highly weighted to non-smokers. Look to see if there is a correlation
 - Family history. Also highly weighted.  Look for a correlation.
 - Medical History items all seem weighted to the negatives for each of the conditions specified.  Perhaps look for a correlation.
