@@ -47,6 +47,13 @@ Data contains 1389 negative diagnosis and 760 with a positive diagnosis.
 ## Evaluation
 
 ## Conclusion
+We have decided to work with the Alzheimer's Disease Dataset, which contains health information about 2,149 patients. This dataset includes patient demographics, lifestyle factors, medical history, clinical measurements, cognitive and functional assessments, symptoms, diagnosis data, and confidential information.
+
+Our research question focused on investigating whether lifestyle factors play a role in developing Alzheimer's disease and whether modifying these factors can reduce the risk of getting the disease.
+
+We dropped some columns, such as PatientID and DoctorInCharge, as they were irrelevant to our research question. We used feature selection with SelectKBest to extract the most relevant features based on their chi-square scores, indicating their importance in predicting Alzheimer's disease. We found that four out of six lifestyle factors—BMI, Physical Activity, Diet Quality, and Sleep Quality—are among the top predictors of Alzheimer's disease.
+
+We implemented two models, Logistic Regression and Random Forest Classifier. The Logistic Regression model achieved an overall accuracy of approximately 83%, while the Random Forest Classifier achieved an accuracy of around 85%. Although the Random Forest Classifier performed better, both models require further tuning to improve their performance.
 
 ## Citations
 @misc{rabie_el_kharoua_2024,
