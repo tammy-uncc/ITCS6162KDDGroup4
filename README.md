@@ -53,7 +53,7 @@ Our research question focused on investigating whether lifestyle factors play a 
 
 We dropped some columns, such as PatientID and DoctorInCharge, as they were irrelevant to our research question. We used feature selection with SelectKBest to extract the most relevant features based on their chi-square scores, indicating their importance in predicting Alzheimer's disease. We found that four out of six lifestyle factors—BMI, Physical Activity, Diet Quality, and Sleep Quality—are among the top predictors of Alzheimer's disease.
 
-We implemented two models, Logistic Regression and Random Forest Classifier. The Logistic Regression model achieved an overall accuracy of approximately 83%, while the Random Forest Classifier achieved an accuracy of around 85%. Although the Random Forest Classifier performed better, both models require further tuning to improve their performance.
+We implemented two models, Logistic Regression and Random Forest Classifier. The Logistic Regression model achieved an overall accuracy of approximately 83%, with the precision of 85% for class 0 and 80% for class 1. As for the Random Forest Classifier, it achieved an overall accuracy of around 85%, with the precision of 82% for class 0 and 95% for class 1. Although the Random Forest Classifier performed better, both models require further tuning to improve their performance.
 
 ## Citations
 @misc{rabie_el_kharoua_2024,
