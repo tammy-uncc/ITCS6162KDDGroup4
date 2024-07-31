@@ -1,4 +1,4 @@
-Refer to KDD_Project.ipynb for Deliverable 1
+# Refer to KDD_Project.ipynb for Deliverable 1 & 2
 
 
 # ITCS 6162 KDD Group 4
@@ -7,16 +7,31 @@ Repository for group project documentation
 ## Github repository
 https://github.com/tammy-uncc/ITCS6162KDDGroup4.git
 
-## Team Members
-Julie Berryhill<br>
-Manoj Aitha<br>
-Gabriel Van Dreel<br>
-Tammy Ziegler<br>
-Dasha Rizvanova<br>
+## The Group 4 Team
+The team collaborated by meeting twice per week over zoom. They also communicated extensively by email and SMS test. Together they delegated duties and each one of performed their tasks either on their own or with others. Their work was then reviewed, and if necessary, added to by the other members of the group. The choice of the research question was a group collaboration with each member probividing one or more questions to the discussion. Once identified the team had a direction. 
+
+### Team Members
+Following are the members of the group and the tasks they worked on:  
+
+#### Julie Berryhill<br>
+Julie wrote up the introduction and performed the work on the PyCaret code section of the notebook.
+
+#### Gabriel Van Dreel<br>
+Gabriel wrote up the data understanding section and performed the work on the preprocessing coding and the modeling sections of the notebook.
+
+#### Dasha Rizvanova<br>
+Dasha wrote the conclusion and evaluation sections.
+
+#### Manoj Aitha<br>
+Manoj investigated if there was any value in performing the association rules on our dataset given our research question.
+
+#### Tammy Ziegler<br>
+Tammy lead the meetings and kept the meeting notes. She also built out the initial notebook document with the data loading and data analysis code.
 
 
-## Introduction of Project
-Group 4 decided that they would like to research the possibility of whether an individual could change their lifestyle factors in time to reduce or eliminate the onset of Alzheimer's. For example, if an individual knew that a healthier diet could reduce their chance of a positive diagnosis, then they may put eating healthier as an earlier priority in their lives. This dataset includes many lifestyle factors (BMI, smoking status, alcohol consumption, physical activity, diet quality, and sleep quality) that will help in building predictive and prescriptive objectives.
+
+## Introduction
+The group decided that they would like to research the possibility of whether an individual could change their lifestyle factors in time to reduce or eliminate the onset of Alzheimer's. For example, if an individual knew that a healthier diet could reduce their chance of a positive diagnosis, then they may put eating healthier as an earlier priority in their lives. This dataset includes many lifestyle factors (BMI, smoking status, alcohol consumption, physical activity, diet quality, and sleep quality) that will help in building predictive and prescriptive objectives.
 We will be using supervised learning methods as the diagnosis of Alzheimer's is a known outcome in this dataset. We will be looking into classification, clustering, and feature selection to identify and select the most relevant features to improve the predictive models. By using these approaches, group 4 hopes that this research will uncover any insights of lifestyle risk factors for developing Alzheimer’s and which lifestyle factor modifications could mitigate those risks.
 
 ### Problem Understanding
@@ -30,7 +45,7 @@ https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset?select
 
 The dataset consists of 2150 entries detailing various physiological characteristics of patients who were considered for an Alzheimer’s disease diagnosis and whether they were formally diagnosed with the illness. Some of the data such as the gender and ethnicity columns is categorical while other data is numeric and represents either an index for a rating of some condition such as sleep quality or a direct measurement of some physical characteristic such as cholesterol. All of the numeric data points could be considered time series data with respect to age. Some columns in the dataset such as the name of the doctor in charge of a given patient, however, have been sanitized and provide no meaningful information.
 
-### Data Preparation
+## Data Preprocessing
 Data contains 1389 negative diagnosis and 760 with a positive diagnosis.
 
 ##### Data  
@@ -42,9 +57,9 @@ Data contains 1389 negative diagnosis and 760 with a positive diagnosis.
 - Medical History items all seem weighted to the negatives for each of the conditions specified.  Perhaps look for a correlation.
 - Memory complaints and Behavioral Problems seems to be a very subjective data element. Perhaps these should be removed.
 
-## Modeling
+## Methodology
 
-## Evaluation
+### Evaluation
 
 ## Conclusion
 We have decided to work with the Alzheimer's Disease Dataset, which contains health information about 2,149 patients. This dataset includes patient demographics, lifestyle factors, medical history, clinical measurements, cognitive and functional assessments, symptoms, diagnosis data, and confidential information.
