@@ -51,7 +51,7 @@ https://edition.cnn.com/2024/06/07/health/alzheimers-dementia-ornish-lifestyle-w
 https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset?resource=download
 
 
-### Data Understanding
+## Data Understanding
 https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset?select=alzheimers_disease_data.csv
 
 We will attempt to use the above Alzheimer's data set for our research. The dataset consists of 2150 entries detailing various physiological characteristics of patients who were considered for an Alzheimer's disease diagnosis and whether they were formally diagnosed with the illness. Some of the data such as the gender and ethnicity columns is categorical while other data is numeric and represents either an index for a rating of some condition such as sleep quality or a direct measurement of some physical characteristic such as cholesterol. All the numeric data points could be considered time series data concerning age. Some columns in the dataset such as the name of the doctor in charge of a given patient, however, have been sanitized and provide no meaningful information.
@@ -121,7 +121,7 @@ We then performed visualizations. A heatmap shows that only five features have s
 Finally, since we are concerned about lifestyle choices having an impact on the onset of Alzheimer's we produced swarm plots to show if any relationship exists between the numeric lifestyle choices with Gender and Ethnicity. Gender and Ethnicity were chosen as these are features a patient cannot control. It appears that there are no significant correlations however, a keen observer might see that Asians who drink a lot may be more likely to develop Alzheimer's, but that needs to be tempered with the fact that 40.78% of Asians are positive for Alzheimer's, which is the highest of all the Ethnic groups covered. It is also much more than the total dataset of 36%.
 
 
-## Data Preprocessing
+## Data Preparation
 The categorical columns of the Alzheimer's Disease Dataset will be one-hot encoded during data preprocessing. Any of the numeric columns will be standardized such that they reflect a normal distribution if they are found to be normally distributed while others could be linearly scaled to reduce the effect of bias in any machine learning models for the dataset. The sanitized columns in the dataset could also be dropped since they provide no useful information.
 
 We decided to drop the Education Level feature as well as the Patient ID and the Doctor in Charge. These features provide little to no value to our study. Patient ID is a numeric identifier and is unrelated to the data. DoctorInCharge has been given to us sanitized and contains no valuable information. Education Level has about the same diagnosis split as the entire set.
@@ -140,7 +140,9 @@ Finally, we redid the RandomForestClassifier using the one-hot encoding. We also
 
 ### Evaluation
 
-For the k=10 best features, univariate statistical tests were performed for the predictive relationship between the input features and class labels used with the trained models. A score representing a proportion of predictive contribution with respect to the 10th-most influential feature to performing accurate classification was generated and sorted in descending order based on a fit to the distribution of data points in each column to a chi squared distribution. It was observed that MMSE, FunctionalAssessment, and ADL were the strongest predictors of an Alzheimer's classification. 
+The data seems to show that the strongest predictors were MMSE, Functional Assessment, and ADL. This does not mean that lifestyle features do not play a role. Diet Quality and its components such as Cholesterol Triglycerides, Diabetes do have some say in the matter. However, it seems smokers are not any more likely to be at risk of Alzheimer's than non-smokers. Physical Activity, BMI, and Sleep Quality also rated below low showing that they probably have little influence on the prediction.
+
+The data may counter other studies and research. This is likely due to the quality of the data.  For one, it is a small dataset and we do not know very much about its source or how and when it was derived.  There are 32 features and the combinations are enormous. Much larger than the 2150 record dataset we used for the study.  Also, this data is a static picture. A study like this may perform better with some sort of time series data for a single patient over several years.  It would be useful to know what patients were doing to potentially cause or prevent the disease in the future.
 
 ## Conclusion
 We have decided to work with the Alzheimer's Disease Dataset, which contains health information about 2,149 patients. This dataset includes patient demographics, lifestyle factors, medical history, clinical measurements, cognitive and functional assessments, symptoms, diagnosis data, and confidential information.
@@ -150,6 +152,11 @@ Our research question focused on investigating whether lifestyle factors play a 
 We dropped some columns, such as PatientID and DoctorInCharge, as they were irrelevant to our research question. We used feature selection with SelectKBest to extract the most relevant features based on their chi-square scores, indicating their importance in predicting Alzheimer's disease. We found that four out of six lifestyle factors—BMI, Physical Activity, Diet Quality, and Sleep Quality—are among the top predictors of Alzheimer's disease.
 
 We implemented two models, Logistic Regression and Random Forest Classifier. The Logistic Regression model achieved an overall accuracy of approximately 83%, with the precision of 85% for class 0 and 80% for class 1. As for the Random Forest Classifier, it achieved an overall accuracy of around 85%, with the precision of 82% for class 0 and 95% for class 1. Although the Random Forest Classifier performed better, both models require further tuning to improve their performance.
+
+The data seems to show that the strongest predictors were MMSE, Functional Assessment, and ADL. This does not mean that lifestyle features do not play a role. Diet Quality and its components such as Cholesterol Triglycerides, Diabetes do have some say in the matter. However, it seems smokers are not any more likely to be at risk of Alzheimer's than non-smokers. Physical Activity, BMI, and Sleep Quality also rated below low showing that they probably have little influence on the prediction.
+
+The data may counter other studies and research. This is likely due to the quality of the data.  For one, it is a small dataset and we do not know very much about its source or how and when it was derived.  There are 32 features and the combinations are enormous. Much larger than the 2150 record dataset we used for the study.  Also, this data is a static picture. A study like this may perform better with some sort of time series data for a single patient over several years.  It would be useful to know what patients were doing to potentially cause or prevent the disease in the future.
+
 
 ## Citations
 @misc{rabie_el_kharoua_2024,
