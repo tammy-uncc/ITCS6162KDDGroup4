@@ -15,7 +15,7 @@ We will be using supervised learning methods as the diagnosis of Alzheimer's is 
 We will be looking into classification, clustering, and feature selection to identify and select the most relevant features to improve the predictive models. By using these approaches, group 4 hopes this research will uncover any insights of lifestyle risk factors for developing Alzheimer's and which lifestyle factor modifications could mitigate those risks.
 
 ### The Group 4 Team
-The team collaborated by meeting twice per week over Zoom. We also communicated extensively by email and SMS test. We delegated the tasks as a group and each one of us performed our tasks alone or with others. Our work was then reviewed, and if necessary, added to by the other members of the group. The choice of the research question was a group collaboration with each member providing one or more questions to the discussion. Once identified the team had a direction.  
+The team collaborated by meeting twice per week over Zoom. We also communicated extensively by email and SMS text. We delegated the tasks as a group and each one of us performed our tasks alone or with others. Our work was then reviewed, and if necessary, added to by the other members of the group. The choice of the research question was a group collaboration with each member providing one or more questions to the discussion. Once identified the team had a direction.  
 
 #### Team Members
 Following are the members of the group and the tasks they worked on:  
