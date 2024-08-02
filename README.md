@@ -37,7 +37,7 @@ Tammy lead the meetings and kept the meeting notes. She also built out the initi
 
 
 ### Problem Understanding
-The problem starts with the question, are there any lifestyle factors that could be changed to reduce or eliminate the onset of Alzheimer's? It is one thing to be able to identify if someone can be diagnosed with Alzheimer's but quite the other to understand what we can do to prevent or even delay the onset of the disease. We are considering lifestyle factors to be those things we can change such as; BMI, Smoking, Alcohol Consumption, Physical Activity, Diet Quality, and Sleep Quality. We might also include such things as cholesterol but there typically the result of a quality diet, which is already represented.
+The problem starts with the question: Are there any lifestyle factors that could be changed to reduce or eliminate the onset of Alzheimer's? It is one thing to be able to identify if someone can be diagnosed with Alzheimer's but quite the other to understand what we can do to prevent or even delay the onset of the disease. We are considering lifestyle factors to be those things we can change, such as BMI, Smoking, Alcohol Consumption, Physical Activity, Diet Quality, and Sleep Quality. We might also include such things as cholesterol, but that is typically the result of a quality diet, which is already represented.
 
 #### Relevant Domain
 We provided some links for further reading.
@@ -54,11 +54,11 @@ https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset?resour
 ## Data Understanding
 https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset?select=alzheimers_disease_data.csv
 
-We will attempt to use the Alzheimer's data pointed to by the link above for our research. The dataset consists of 2150 entries detailing various physiological characteristics of patients who were considered for an Alzheimer's disease diagnosis and whether they were formally diagnosed with the illness. Some of the data such as the gender and ethnicity columns is categorical while other data is numeric and represents either an index for a rating of some condition such as sleep quality or a direct measurement of some physical characteristic such as cholesterol. All the numeric data points could be considered time series data concerning age. Some columns in the dataset such as the name of the doctor in charge of a given patient, however, have been sanitized and provide no meaningful information.
+We will attempt to use the Alzheimer's data pointed to by the link above for our research. The dataset consists of 2,150 entries detailing various physiological characteristics of patients who were considered for an Alzheimer's disease diagnosis and whether they were formally diagnosed with the illness. Some data, such as the gender and ethnicity columns is categorical while other data is numeric and represents either an index for a rating of some condition, such as sleep quality, or a direct measurement of some physical characteristic, such as cholesterol. All the numeric data points could be considered time series data concerning age. However, some columns in the dataset, such as the name of the doctor in charge of a given patient, have been sanitized and provide no meaningful information.
 
 
 #### The Features
-There are 33 features in the dataset.  Six of the features are Lifestyle features.  These follow and the remainder of the features after that.  The list was taken right from the data sources page and presented here in a different order to represent out purpose.
+There are 33 features in the dataset.  Six of these features are Lifestyle features, listed below, followed by the other features. The list was taken directly from the data sources page and is presented here in a different order to represent out purpose.
 
 ##### Lifestyle Features
 - BMI: Body Mass Index of the patients, ranging from 15 to 40.
@@ -83,32 +83,41 @@ There are 33 features in the dataset.  Six of the features are Lifestyle feature
   - 1: High School
   - 2: Bachelor's
   - 3: Higher
+    
+- Medical History:
 - FamilyHistoryAlzheimers: Family history of Alzheimer's Disease, where 0 indicates No and 1 indicates Yes.
 - CardiovascularDisease: Presence of cardiovascular disease, where 0 indicates No and 1 indicates Yes.
 - Diabetes: Presence of diabetes, where 0 indicates No and 1 indicates Yes.
 - Depression: Presence of depression, where 0 indicates No and 1 indicates Yes.
 - HeadInjury: History of head injury, where 0 indicates No and 1 indicates Yes.
 - Hypertension: Presence of hypertension, where 0 indicates No and 1 indicates Yes.
+  
+- Clinical Measurements:
 - SystolicBP: Systolic blood pressure, ranging from 90 to 180 mmHg.
 - DiastolicBP: Diastolic blood pressure, ranging from 60 to 120 mmHg.
 - CholesterolTotal: Total cholesterol levels, ranging from 150 to 300 mg/dL.
 - CholesterolLDL: Low-density lipoprotein cholesterol levels, ranging from 50 to 200 mg/dL.
 - CholesterolHDL: High-density lipoprotein cholesterol levels, ranging from 20 to 100 mg/dL.
 - CholesterolTriglycerides: Triglycerides levels, ranging from 50 to 400 mg/dL.
-- Cognitive and Functional Assessments
+  
+- Cognitive and Functional Assessments:
 - MMSE: Mini-Mental State Examination score, ranging from 0 to 30. Lower scores indicate cognitive impairment.
 - FunctionalAssessment: Functional assessment score, ranging from 0 to 10. Lower scores indicate greater impairment.
 - MemoryComplaints: Presence of memory complaints, where 0 indicates No and 1 indicates Yes.
 - BehavioralProblems: Presence of behavioral problems, where 0 indicates No and 1 indicates Yes.
 - ADL: Activities of Daily Living score, ranging from 0 to 10. Lower scores indicate greater impairment.
+  
+- Symptoms:
 - Confusion: Presence of confusion, where 0 indicates No and 1 indicates Yes.
 - Disorientation: Presence of disorientation, where 0 indicates No and 1 indicates Yes.
 - PersonalityChanges: Presence of personality changes, where 0 indicates No and 1 indicates Yes.
 - DifficultyCompletingTasks: Presence of difficulty completing tasks, where 0 indicates No and 1 indicates Yes.
 - Forgetfulness: Presence of forgetfulness, where 0 indicates No and 1 indicates Yes.
+
+- Confidential Information:
 - DoctorInCharge: This column contains confidential information about the doctor in charge, with "XXXConfid" as the value for all patients.
 
-#### The Diagnosis
+#### The Diagnosis:
 - Diagnosis: Diagnosis status for Alzheimer's Disease, where 0 indicates No and 1 indicates Yes.
 
 ### Data analysis
