@@ -1,5 +1,5 @@
 # ITCS 6162 KDD Group 4
-Repository for group project documentation
+Welcome to the repository for Group 4 project documentation
 
 ## Github repository
 https://github.com/tammy-uncc/ITCS6162KDDGroup4.git
