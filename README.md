@@ -6,13 +6,13 @@ https://github.com/tammy-uncc/ITCS6162KDDGroup4.git
 
 
 ## Introduction
-Group 4 decided they would like to research whether an individual could change their lifestyle factors in time to reduce or eliminate the onset of Alzheimer's. For example, if an individual knew that a healthier diet could reduce their chance of a positive diagnosis, then they may put eating healthier as an earlier priority in their lives. This dataset includes many lifestyle factors (BMI, smoking status, alcohol consumption, physical activity, diet quality, and sleep quality) that will help in building predictive and prescriptive objectives.
+Group 4 decided they would like to research whether an individual could change their lifestyle factors in time to reduce or eliminate the onset of Alzheimer's. For example, suppose an individual knew that a healthier diet could reduce their chance of a positive diagnosis. In that case, they may prioritize eating healthier earlier in their lives. This dataset includes many lifestyle factors (BMI, smoking status, alcohol consumption, physical activity, diet quality, and sleep quality) that will help build predictive and prescriptive objectives.
 We will be using supervised learning methods as the diagnosis of Alzheimer's is a known outcome in this dataset.
 
-We will be looking into classification, clustering, and feature selection to identify and select the most relevant features to improve the predictive models. By using these approaches, group 4 hopes this research will uncover any insights into lifestyle risk factors for developing Alzheimer's and which lifestyle factor modifications could mitigate those risks.
+We will look into classification, clustering, and feature selection to identify and select the most relevant features to improve the predictive models. By using these approaches, group 4 hopes this research will uncover insights into lifestyle risk factors for developing Alzheimer's and which lifestyle factor modifications could mitigate those risks.
 
 ### The Group 4 Team
-The team collaborated by meeting twice per week over Zoom. We also communicated extensively by email and SMS text. We delegated the tasks as a group and each one of us performed our tasks alone or with others. Our work was then reviewed, and if necessary, added to by the other members of the group. The choice of the research question was a group collaboration with each member providing one or more questions to the discussion. Once identified the team had a direction.  
+The team collaborated by meeting twice per week over Zoom. We also communicated extensively by email and SMS text. We delegated the tasks as a group and each performed our tasks alone or with others. Our work was then reviewed, and if necessary, added to by the others in the group. The choice of the research question was a group collaboration with each member providing one or more questions to the discussion. Once identified the team had a direction.  
 
 #### Team Members
 Following are the members of the group and the tasks they worked on:  
@@ -21,7 +21,7 @@ Following are the members of the group and the tasks they worked on:
 Julie wrote up the introduction and performed the work on the PyCaret code section of the notebook.
 
 ##### Gabriel Van Dreel<br>
-Gabriel wrote up the data understanding section and performed the work on the preprocessing coding and the modeling sections of the notebook.
+Gabriel wrote up the data understanding section and performed the work on the preprocessing and modeling sections of the notebook.
 
 ##### Dasha Rizvanova<br>
 Dasha wrote the conclusion and evaluation sections.
@@ -34,7 +34,7 @@ Tammy led the meetings and kept the meeting notes. She also built out the initia
 
 
 ### Problem Understanding
-The problem starts with the question: Are there any lifestyle factors that could be changed to reduce or eliminate the onset of Alzheimer's? It is one thing to be able to identify if someone can be diagnosed with Alzheimer's but quite the other to understand what we can do to prevent or even delay the onset of the disease. We are considering lifestyle factors to be those things we can change, such as BMI, Smoking, Alcohol Consumption, Physical Activity, Diet Quality, and Sleep Quality. We might also include such things as cholesterol, but that is typically the result of a quality diet, which is already represented.
+The problem starts with the question: Are there any lifestyle factors that could be changed to reduce or eliminate the onset of Alzheimer's? It is one thing to be able to identify if someone can be diagnosed with Alzheimer's but quite the other to understand what we can do to prevent or even delay the onset of the disease. We consider lifestyle factors to be those things we can change, such as BMI, Smoking, Alcohol Consumption, Physical Activity, Diet Quality, and Sleep Quality. We could also include things such as cholesterol, but they are typically the result of a quality diet.
 
 #### Relevant Domain
 We provided some links for further reading.
@@ -51,11 +51,11 @@ https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset?resour
 ## Data Understanding
 https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset?select=alzheimers_disease_data.csv
 
-We will attempt to use the Alzheimer's data pointed to by the link above for our research. The dataset consists of 2,150 entries detailing various physiological characteristics of patients who were considered for an Alzheimer's disease diagnosis and whether they were formally diagnosed with the illness. Some data, such as the gender and ethnicity columns is categorical while other data is numeric and represents either an index for a rating of some condition, such as sleep quality, or a direct measurement of some physical characteristic, such as cholesterol. All the numeric data points could be considered time series data concerning age. However, some columns in the dataset, such as the name of the doctor in charge of a given patient, have been sanitized and provide no meaningful information.
+We will attempt to use the Alzheimer's data pointed to by the link above for our research. The dataset consists of 2,150 entries detailing various physiological characteristics of patients. These patients were considered for an Alzheimer's disease diagnosis and whether they were formally diagnosed with the illness. Some data, such as the gender, and ethnicity columns are categorical. Other data is numeric and represents either an index for a rating of some condition, such as sleep quality, or a direct measurement of some physical characteristic, such as cholesterol. All the numeric data points could be considered time series data concerning age. However, some columns in the dataset, such as the name of the doctor in charge of a given patient, have been sanitized and provide no meaningful information.
 
 
 #### The Features
-There are 33 features in the dataset.  Six of these features are Lifestyle features, listed below, followed by the other features. The list was taken directly from the data sources page and is presented here in a different order to represent our purpose.
+There are 33 features in the dataset.  Six features are Lifestyle features. These are listed below, followed by the other features. The list was taken directly from the data sources web page and reordered to represent our focus.
 
 ##### Lifestyle Features
 - BMI: Body Mass Index of the patients, ranging from 15 to 40.
@@ -75,7 +75,7 @@ There are 33 features in the dataset.  Six of these features are Lifestyle featu
   - 1: African American
   - 2: Asian
   - 3: Other
-- EducationLevel: The education level of the patients, coded as follows:
+- EducationLevel: The education level of the patients, is coded as follows:
   - 0: None
   - 1: High School
   - 2: Bachelor's
@@ -113,15 +113,15 @@ There are 33 features in the dataset.  Six of these features are Lifestyle featu
 - Diagnosis: Diagnosis status for Alzheimer's Disease, where 0 indicates No and 1 indicates Yes.
 
 ### Data analysis
-Our analysis of the data involved various visualizations and statistics gathering. We used the `yada_profiling` tool to build a basic review of the data. We learned that there are no duplicate rows or rows with missing data, so we will not need to impute any data or remove rows. However, we noticed that the label classification, Diagnosis, is heavily weighted with a negative diagnosis. There are twice as many negative diagnoses as there are positive. Hence, this could cause the prediction models to have a bias. In addition, we noticed the Ethnicity and Education Level, as well as many of the binary class features, are also imbalanced. 
+Our analysis of the data involved various visualizations and statistics gathering. We used the `yada_profiling` tool to build a basic understanding of the data. We learned that there are no duplicate rows or rows with missing data, so we will not need to impute any data or remove rows. However, we noticed that the label classification, Diagnosis, is heavily weighted with a negative diagnosis. There are twice as many negative diagnoses as there are positive. Hence, this could cause the prediction models to have a bias. In addition, we noticed the Ethnicity and Education Level, as well as many of the binary class features, are also imbalanced. 
 
 We then performed different visualizations. A heatmap shows that only five features have some semblance of a correlation with the Diagnosis: MMSE, FunctionalAssessment, ADL, MemoryComplaints, and BehavioralProblems. None of the features are correlated with one another. Density plots were used to help identify any relationships between the numeric features and the label. They identify the same numeric features as the heatmap as the most significant. On the categorical data, we used annotated bar plots to show the distribution of the categories concerning the diagnosis. The plots were annotated with the diagnosis percent for each category. The only two features to show an imbalance were MemoryComplaints and BehaviorProblems, confirming with the heatmap that they are the most significant categorical features. 
 
-Finally, since we are concerned about lifestyle choices having an impact on the onset of Alzheimer's, we produced swarm plots to show if any relationship exists between the numeric lifestyle choices with Gender and Ethnicity. Gender and Ethnicity were chosen as these are features a patient cannot control. It appears that there are no significant correlations; however, a keen observer might see that Asians who drink a lot may be more likely to develop Alzheimer's. This observation needs to be tempered with the fact that 40.78% of Asians are positive for Alzheimer's, which is the highest of all the ethnic groups covered and much more than the total dataset of 36%.
+Finally, since we are concerned about lifestyle choices impacting the onset of Alzheimer's, we produced swarm plots to show if any relationship exists between the numeric lifestyle choices with Gender and Ethnicity. Gender and Ethnicity were chosen as these are features a patient cannot control. It appears that there are no significant correlations; however, a keen observer might see that Asians who drink a lot may be more likely to develop Alzheimer's. This observation needs to be tempered with the fact that 40.78% of Asians are positive for Alzheimer's, which is the highest of all the ethnic groups covered and much more than the total dataset of 36%.
 
 
 ## Data Preparation
-The categorical columns of the Alzheimer's Disease Dataset will be one-hot encoded during data preprocessing. Any numeric columns that are found to be normally distributed will be standardized to reflect a normal distribution, while others could be linearly scaled to reduce the effect of bias in any machine learning models for the dataset. The sanitized columns in the dataset could also be dropped since they provide no useful information.
+The categorical columns of the Alzheimer's Disease Dataset will be one-hot encoded during data preprocessing. Any numeric columns found to be normally distributed will be standardized to reflect a normal distribution. Others could be linearly scaled to reduce the effect of bias in any machine learning models for the dataset. The sanitized columns in the dataset could also be dropped since they provide no useful information.
 
 The Patient ID and the Doctor in Charge have been removed from the dataset before processing. These features provide little to no value to our study. Patient ID is a numeric identifier and is unrelated to the data. DoctorInCharge has been given to us sanitized and contains no valuable information. 
 
