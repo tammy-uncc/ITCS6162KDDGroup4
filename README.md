@@ -30,7 +30,7 @@ Dasha wrote the conclusion and evaluation sections.
 Manoj investigated if there was any value in performing the association rules on our dataset given our research question.
 
 ##### Tammy Ziegler<br>
-Tammy led the meetings and kept the meeting notes. She also built out the initial notebook document with the data loading and data analysis code.
+Tammy led the meetings and kept the meeting notes. She also built out the initial notebook document with the data loading and performed the initcial work on the eploratory data anlysis.
 
 
 ### Problem Understanding
