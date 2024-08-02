@@ -1,6 +1,3 @@
-# Refer to KDD_Project.ipynb for Deliverable 1 & 2
-
-
 # ITCS 6162 KDD Group 4
 Repository for group project documentation
 
