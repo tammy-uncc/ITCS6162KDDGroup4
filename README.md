@@ -83,16 +83,14 @@ There are 33 features in the dataset.  Six of these features are Lifestyle featu
   - 1: High School
   - 2: Bachelor's
   - 3: Higher
-    
-- Medical History:
+
 - FamilyHistoryAlzheimers: Family history of Alzheimer's Disease, where 0 indicates No and 1 indicates Yes.
 - CardiovascularDisease: Presence of cardiovascular disease, where 0 indicates No and 1 indicates Yes.
 - Diabetes: Presence of diabetes, where 0 indicates No and 1 indicates Yes.
 - Depression: Presence of depression, where 0 indicates No and 1 indicates Yes.
 - HeadInjury: History of head injury, where 0 indicates No and 1 indicates Yes.
 - Hypertension: Presence of hypertension, where 0 indicates No and 1 indicates Yes.
-  
-- Clinical Measurements:
+
 - SystolicBP: Systolic blood pressure, ranging from 90 to 180 mmHg.
 - DiastolicBP: Diastolic blood pressure, ranging from 60 to 120 mmHg.
 - CholesterolTotal: Total cholesterol levels, ranging from 150 to 300 mg/dL.
@@ -100,44 +98,41 @@ There are 33 features in the dataset.  Six of these features are Lifestyle featu
 - CholesterolHDL: High-density lipoprotein cholesterol levels, ranging from 20 to 100 mg/dL.
 - CholesterolTriglycerides: Triglycerides levels, ranging from 50 to 400 mg/dL.
   
-- Cognitive and Functional Assessments:
 - MMSE: Mini-Mental State Examination score, ranging from 0 to 30. Lower scores indicate cognitive impairment.
 - FunctionalAssessment: Functional assessment score, ranging from 0 to 10. Lower scores indicate greater impairment.
 - MemoryComplaints: Presence of memory complaints, where 0 indicates No and 1 indicates Yes.
 - BehavioralProblems: Presence of behavioral problems, where 0 indicates No and 1 indicates Yes.
 - ADL: Activities of Daily Living score, ranging from 0 to 10. Lower scores indicate greater impairment.
   
-- Symptoms:
 - Confusion: Presence of confusion, where 0 indicates No and 1 indicates Yes.
 - Disorientation: Presence of disorientation, where 0 indicates No and 1 indicates Yes.
 - PersonalityChanges: Presence of personality changes, where 0 indicates No and 1 indicates Yes.
 - DifficultyCompletingTasks: Presence of difficulty completing tasks, where 0 indicates No and 1 indicates Yes.
 - Forgetfulness: Presence of forgetfulness, where 0 indicates No and 1 indicates Yes.
 
-- Confidential Information:
 - DoctorInCharge: This column contains confidential information about the doctor in charge, with "XXXConfid" as the value for all patients.
 
 #### The Diagnosis:
 - Diagnosis: Diagnosis status for Alzheimer's Disease, where 0 indicates No and 1 indicates Yes.
 
 ### Data analysis
-Our analysis of the data involved various visualizations and statistics gathering. We used the yada_profiling tool to build a basic review of the data. We learned that there are no duplicate rows or rows with missing data. As such we will not need to impute any data or remove rows. However, we noticed that the label classification, Diagnosis, is heavily weighted with a negative diagnosis. There are twice as many negative diagnoses as there are positive. This could cause the prediction models to have a bias.  
+Our analysis of the data involved various visualizations and statistics gathering. We used the `yada_profiling` tool to build a basic review of the data. We learned that there are no duplicate rows or rows with missing data, so we will not need to impute any data or remove rows. However, we noticed that the label classification, Diagnosis, is heavily weighted with a negative diagnosis. There are twice as many negative diagnoses as there are positive. Hence, this could cause the prediction models to have a bias.  
 
-In addition, we noticed the Ethnicity and Education Level are also imbalanced as well as many of the binary class features. The "Education Level" does not appear to provide any value. Hence we decided to remove it from the dataset. 
+In addition, we noticed the Ethnicity and Education Level, as well as many of the binary class features, are also imbalanced. The "Education Level" does not appear to provide any value, so we decided to remove it from the dataset. 
 
-We then performed visualizations. A heatmap shows that only five features have some semblance of a correlation with the Diagnosis; MMSE, FunctionalAssessment, ADL, MemoryComplaints, and BehavioralProblems. None of the features are correlated with one another. Density plots were used to help identify any relationships between the numeric features and the label. They identify the same numeric features as the heatmap as the most significant. On the categorical data, we used annotated bar plots to show the distribution of the categories concerning the diagnosis. The plots were annotated with the diagnosis percent for each category. The only two features to show an imbalance were MemoryComplaints and BehaviorProblems, confirming with the heatmap that they are the most significant categorical features. 
+We then performed different visualizations. A heatmap shows that only five features have some semblance of a correlation with the Diagnosis: MMSE, FunctionalAssessment, ADL, MemoryComplaints, and BehavioralProblems. None of the features are correlated with one another. Density plots were used to help identify any relationships between the numeric features and the label. They identify the same numeric features as the heatmap as the most significant. On the categorical data, we used annotated bar plots to show the distribution of the categories concerning the diagnosis. The plots were annotated with the diagnosis percent for each category. The only two features to show an imbalance were MemoryComplaints and BehaviorProblems, confirming with the heatmap that they are the most significant categorical features. 
 
-Finally, since we are concerned about lifestyle choices having an impact on the onset of Alzheimer's we produced swarm plots to show if any relationship exists between the numeric lifestyle choices with Gender and Ethnicity. Gender and Ethnicity were chosen as these are features a patient cannot control. It appears that there are no significant correlations however, a keen observer might see that Asians who drink a lot may be more likely to develop Alzheimer's, but that needs to be tempered with the fact that 40.78% of Asians are positive for Alzheimer's, which is the highest of all the Ethnic groups covered. It is also much more than the total dataset of 36%.
+Finally, since we are concerned about lifestyle choices having an impact on the onset of Alzheimer's, we produced swarm plots to show if any relationship exists between the numeric lifestyle choices with Gender and Ethnicity. Gender and Ethnicity were chosen as these are features a patient cannot control. It appears that there are no significant correlations; however, a keen observer might see that Asians who drink a lot may be more likely to develop Alzheimer's. This observation needs to be tempered with the fact that 40.78% of Asians are positive for Alzheimer's, which is the highest of all the ethnic groups covered and much more than the total dataset of 36%.
 
 
 ## Data Preparation
-The categorical columns of the Alzheimer's Disease Dataset will be one-hot encoded during data preprocessing. Any of the numeric columns will be standardized such that they reflect a normal distribution if they are found to be normally distributed while others could be linearly scaled to reduce the effect of bias in any machine learning models for the dataset. The sanitized columns in the dataset could also be dropped since they provide no useful information.
+The categorical columns of the Alzheimer's Disease Dataset will be one-hot encoded during data preprocessing. Any numeric columns that are found to be normally distributed will be standardized to reflect a normal distribution, while others could be linearly scaled to reduce the effect of bias in any machine learning models for the dataset. The sanitized columns in the dataset could also be dropped since they provide no useful information.
 
-We decided to drop the Education Level feature as well as the Patient ID and the Doctor in Charge. These features provide little to no value to our study. Patient ID is a numeric identifier and is unrelated to the data. DoctorInCharge has been given to us sanitized and contains no valuable information. Education Level has about the same diagnosis split as the entire set.
+We decided to drop the EducationLevel feature, as well as the PatientID and the DoctorInCharge. These features provide little to no value to our study. PatientID is a numeric identifier and is unrelated to the data. DoctorInCharge has been given to us sanitized and contains no valuable information. EducationLevel has about the same diagnosis split as the entire set.
 
 
 ## Methodology
-A grid search was performed to tune hyperparameters for a logistic regression model and a random forest classifier model that were each selected for their ability to effectively fit a non-linear decision boundary with high generalizability.
+A grid search was performed to tune hyperparameters for a Logistic Regression model and a Random Forest Classifier model that were each selected for their ability to effectively fit a non-linear decision boundary with high generalizability.
 
 Although the random forest classifier model has the limitation of having only orthogonal decision boundaries, it was observed to perform binary classification for whether a given patient had Alzheimer's with the highest accuracy. Each model was analyzed with several evaluation criteria where confusion matrices and metrics for precision, recall, and f1-score were evaluated for both the logistic regression model and the random forest classifier model. It was observed that the logistic regression had a more balanced confusion matrix for misclassifications and therefore had a more stable and, in one instance, higher recall than the random forest classifier concerning each classification category.
 
