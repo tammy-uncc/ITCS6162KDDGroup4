@@ -127,9 +127,9 @@ The Patient ID and the Doctor in Charge have been removed from the dataset befor
 
 
 ## Methodology
-A grid search was performed to tune hyperparameters for a Logistic Regression model and a Random Forest Classifier model that were each selected for their ability to effectively fit a non-linear decision boundary with high generalizability.
+A grid search was performed to tune hyperparameters for Logistic Regression and Random Forest Classifier models. These were each selected for their ability to effectively fit a non-linear decision boundary with high generalizability.
 
-Although the Random Forest Classifier model has the limitation of having only orthogonal decision boundaries, it was observed to perform binary classification for whether a given patient had Alzheimer's with the highest accuracy. Each model was analyzed with several evaluation criteria, where confusion matrices and metrics for precision, recall, and f1-score were evaluated for both the Logistic Regression model and the Random Forest Classifier model. It was observed that the logistic regression model had a more balanced confusion matrix for misclassifications and, in one instance, higher recall than the random forest classifier concerning each classification category.
+Although the Random Forest Classifier model has the limitation of having only orthogonal decision boundaries, it was observed to perform binary classification for whether a given patient had Alzheimer's with the highest accuracy. Each model was analyzed using several evaluation criteria. Confusion matrices and metrics for precision, recall, and f1-score were evaluated for both the Logistic Regression model and the Random Forest Classifier model. It was observed that the logistic regression model had a more balanced confusion matrix for misclassifications and, in one instance, higher recall than the random forest classifier concerning each classification category.
 
 Additionally, we leveraged the PyCaret module to validate prediction performance on several other models. We performed experiments with the original untreated data (without the PatientID and DoctorInCharge features), the one-hot encoded data, and the one-hot encoded data after it was over-sampled to balance the target label. A 20% validation set was removed from the data before being balanced and used in the PyCaret module.
 
@@ -139,22 +139,18 @@ Finally, we reran the Random Forest Classifier using the one-hot encoding. We al
 
 ### Evaluation
 
-The data seems to show that the strongest predictors were MMSE, Functional Assessment, and ADL. This does not mean that lifestyle features do not play a role. Diet Quality and its components, such as Cholesterol Triglycerides, Diabetes do have some say in the matter even if it is relatively small. It seems smokers are not any more likely to be at risk of Alzheimer's than non-smokers. Physical Activity also rated low, showing that it probably has little influence on the prediction.
+The data shows that the strongest predictors were MMSE, Functional Assessment, and ADL. This does not mean that lifestyle features do not play a role. Diet Quality and its components, such as Cholesterol Triglycerides, Diabetes do have some say in the matter even if it is relatively small. It seems smokers are not any more likely to be at risk of Alzheimer's than non-smokers. Physical activity also rated low, showing that it likely has little influence on the prediction.
 
-The data appears to counter other studies and research. This is likely due to the quality of the data.  For one, it is a small dataset, and we do not know very much about its source or how and when it was derived.  There are 32 features and the combinations are enormous. Much larger than the 2,150 record dataset we used for the study. Also, this data is a static picture of time. A study like this may perform better with some sort of time series data for many individual patients over several years.  It would be useful to know what patients were doing to potentially cause or prevent the disease in the future. Additionally, the imbalance in certain features, such as Ethnicity could skew the results, highlighting the need for a more balanced dataset. 
+The data appears to counter other studies and research. This is likely due to the quality of the data.  For one, it is a small dataset, and we do not know much about its source or how and when it was derived.  There are 32 features and the combinations are enormous. Much larger than the 2,150 record dataset we used for the study. Also, this data is a static picture of time. A study like this may perform better with time series data on a patient for many patients over several years.  It would be useful to know what patients were doing to cause or prevent the disease in the future. Additionally, the imbalance in certain features, such as Ethnicity could skew the results, highlighting the need for a more balanced dataset. 
 
 ## Conclusion
-We have decided to work with the Alzheimer's Disease Dataset, which contains health information about 2,149 patients. This dataset includes patient demographics, lifestyle factors, medical history, clinical measurements, cognitive and functional assessments, symptoms, diagnosis data, and confidential information.
-
-Our research question focused on investigating whether lifestyle factors play a role in developing Alzheimer's disease and whether modifying these factors can reduce the risk of getting the disease.
-
-The PatientID and DoctorInCharge columns were dropped, as they were irrelevant to our research question. We used feature selection with SelectKBest to extract the most relevant features based on their chi-square scores, indicating their importance in predicting Alzheimer's disease. We found that four out of six lifestyle factors—BMI, Physical Activity, Diet Quality, and Sleep Quality—are among the top predictors of Alzheimer's disease.
+We have decided to work with the Alzheimer's Disease Dataset, which contains health information about 2,149 patients. This dataset includes patient demographics, lifestyle factors, medical history, clinical measurements, cognitive and functional assessments, symptoms, diagnosis data, and confidential information. Our research question focused on investigating whether lifestyle factors play a role in developing Alzheimer's disease and whether modifying these factors can reduce the risk of getting the disease.
 
 Several models were implemented, including; Logistic Regression and Random Forest Classifier. The Logistic Regression model achieved an overall accuracy of approximately 83%, with a precision of 85% for class 0 and 80% for class 1. As for the Random Forest Classifier, after rebalancing the data it achieved an overall accuracy of around 93%, with the precision of 93% for class 0 and 94% for class 1 on the validation data. 
 
-Using the final optimized data, a best feature analysis was performed to discover which features have the most significant impact on prediction. The goal was to determine how much the lifestyle features weigh in on the prediction. The result shows that of the six features, only the Diet Quality has any meaningful impact on the outcome, and that impact is small.
+We used feature selection with SelectKBest to extract the most relevant features based on their chi-square scores, indicating their importance in predicting Alzheimer's disease. We found only four out of six lifestyle factors; BMI, Physical Activity, Diet Quality, and Sleep Quality scored as average predictors of Alzheimer's disease. The other two were insignificant.
 
-Ultimately, the data and this study were not able to corroborate that lifestyle changes can alter the outcome of an Alzheimer's disease diagnosis.
+Ultimately, the data and this study were not able to corroborate that lifestyle changes can significantly alter the outcome of an Alzheimer's disease diagnosis.
 
 
 
